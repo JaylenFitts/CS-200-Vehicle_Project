@@ -23,7 +23,8 @@ void Vehicle::fillTank(double gasAmount){
         this->gasAmount += gasAmount;
     }
     else {
-        cout << "Can't add that much gas\n";
+        this->gasAmount = this->gasTankSize;
+        cout << "Can't add that much gas, filling to top\n";
     }
 }
 
@@ -37,6 +38,10 @@ void Vehicle::setDistTraveled(double dist){
     }
 }
 
-double Vehicle::getLevel(){
+double Vehicle::getGasLevel(){
     return this->gasAmount;
+}
+
+double Vehicle::getDistTraveled(){
+    return this->distTraveled;
 }
