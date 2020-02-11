@@ -6,7 +6,8 @@ class Vehicle {
         Vehicle(double tankSize, double mpg);
         void fillTank(double gasAmount);
         void setDistTraveled(double dist);
-        double getLevel();
+        double getGasLevel();
+        double getDistTraveled();
     private:
         double distTraveled;
         double gasAmount;
