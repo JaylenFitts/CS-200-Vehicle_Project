@@ -15,7 +15,7 @@ Vehicle :: Vehicle(double size, double mpg){
     this->distTraveled = 0;
     this->gasAmount = 0;
     this->gasTankSize = size;
-    mpg = mpg;
+    this->mpg = mpg;
 }
 
 void Vehicle :: fillTank(double gasAmount){
