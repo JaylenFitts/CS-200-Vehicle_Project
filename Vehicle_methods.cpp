@@ -4,21 +4,21 @@
 
 using namespace std;
 
-Vehicle::Vehicle(){
-        this->distTraveled = 0;
-        this->gasAmount = 0;
-        this->gasTankSize = 10;
-        this->mpg = 20;
-    }
-
-Vehicle::Vehicle(double tankSize, double mpg){
+Vehicle :: Vehicle(){
     this->distTraveled = 0;
     this->gasAmount = 0;
-    this->gasTankSize = tankSize;
-    this->mpg = mpg;
+    this->gasTankSize = 10;
+    this->mpg = 20;
 }
 
-void Vehicle::fillTank(double gasAmount){
+Vehicle :: Vehicle(double size, double mpg){
+    this->distTraveled = 0;
+    this->gasAmount = 0;
+    this->gasTankSize = size;
+    mpg = mpg;
+}
+
+void Vehicle :: fillTank(double gasAmount){
     if (this->gasAmount + gasAmount < this->gasTankSize){
         this->gasAmount += gasAmount;
     }
@@ -28,7 +28,7 @@ void Vehicle::fillTank(double gasAmount){
     }
 }
 
-void Vehicle::setDistTraveled(double dist){
+void Vehicle :: setDistTraveled(double dist){
     if (this->gasAmount - (dist/this->mpg)> 0){
         this->distTraveled += dist;
         this->gasAmount -= dist/this->mpg;
@@ -38,10 +38,10 @@ void Vehicle::setDistTraveled(double dist){
     }
 }
 
-double Vehicle::getGasLevel(){
+double Vehicle :: getGasLevel(){
     return this->gasAmount;
 }
 
-double Vehicle::getDistTraveled(){
+double Vehicle :: getDistTraveled(){
     return this->distTraveled;
 }
